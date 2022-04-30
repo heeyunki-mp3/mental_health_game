@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = [0,0];
+    pageIndex = 0;
     currentProgress = 0;
     showMap = false;
 
@@ -59,10 +59,28 @@ function displayBody(){
             reactToTheResponse();
         }
     }
-    else{ // if it's an informative page
-        infoDiv.innerHTML = pageElement.dialogue;
+    else{ // if it's an informative page (dialogue)
+        var dialogueIndex = 0;
+        infoDiv.innerHTML = pageElement.dialogue[dialogueIndex];
+        let nextButton = document.createElement("button");
+        nextButton.onclick =function(){
+            if (dialogueIndex<pageElement.dialogue.length-1){
+                dialogueIndex++;
+                infoDiv.innerHTML = pageElement.dialogue[dialogueIndex];
+            }
+            else{ //finished talking (moving on to the next page)
+                if(pageElement.nextPage!=NULL){
+                    loadPage(pageElement.nextPage);
+                    //nextpage = 2
+                }
+            }
+        }
     }
 }
 function reactToTheResponse(){
-    
+
+}
+function loadPage(toPage){
+    pageIndex = toPage;
+    display();
 }
