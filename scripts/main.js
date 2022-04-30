@@ -12,5 +12,11 @@ function initialize(){
 }
 function display(){
     displayBody();
+    if (showMap){
+        displayMap();//TODO! Alayna, please implement this :DD
+    }
     
+}
+function displayBody(){
+    document.createElement()
 }
