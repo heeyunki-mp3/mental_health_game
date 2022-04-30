@@ -4,30 +4,37 @@ PAGE=[
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"",
             npc:"",
             background:"",
+            isQuestion:true,
+            dialogue:questions[0] 
+            //if isQuestion is true, 
+            //we are accessing the questions from questions.js
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
-            dialogue:""
-        },
-        {
-            place:"Home",
-            npc:"",
-            background:"",
+            isQuestion:false,
             dialogue:""
         }
     ],[
@@ -35,30 +42,35 @@ PAGE=[
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         }
     ],[
@@ -66,30 +78,35 @@ PAGE=[
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         }
     ],[
@@ -97,30 +114,35 @@ PAGE=[
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         },
         {
             place:"Home",
             npc:"",
             background:"",
+            isQuestion:false,
             dialogue:""
         }
     ]
