@@ -1,4 +1,4 @@
-QUESTIONS=[
+questions=[
     [
         {
             number:1,

@@ -4,14 +4,124 @@ PAGE=[
             place:"Home",
             npc:"",
             background:"",
-            
-
+            dialogue:""
+        },
+        {
+            place:"",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
         }
     ],[
-
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        }
     ],[
-
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        }
     ],[
-
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        },
+        {
+            place:"Home",
+            npc:"",
+            background:"",
+            dialogue:""
+        }
     ]
 ]
