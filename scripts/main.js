@@ -10,6 +10,7 @@ function initialize(){
     npcDiv = document.getElementById("npc");
     infoDiv = document.getElementById("information");
     navDiv = document.getElementById("navigation");
+    display();
 }
 function display(){
     displayBody();
@@ -22,7 +23,7 @@ function displayBody(){
     npcDiv.innerHTML = "";
     infoDiv.innerHTML = "";
     
-    pageElement = PAGE[pageIndex[0]][pageIndex[1]];
+    pageElement = PAGE[pageIndex];
 
     //create npc image
     let npcImage = document.createElement("img");

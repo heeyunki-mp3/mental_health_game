@@ -14,6 +14,7 @@ PAGE=[
         npc:"",
         background:"",
         isQuestion:false,
+        
         dialogue: ["Welcome to the Planet of Botanical Garden. I am Pinar the pine tree!", "It feels good to finally get to talk to someone. You see, it gets lonely here in the winter.", "I am the only creature left in this garden. All the flowers and leaves withered due to the cold weather.", "What about you, did you feel lonely last week?"],
         //if isQuestion is true, 
         //we are accessing the questions from questions.js
