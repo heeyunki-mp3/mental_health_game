@@ -13,13 +13,14 @@ const player = {
     frameX: 0,
     frameY: 0,
     speed: 9,
-    moving: false
+    moving: false,
+    place: 0
 };
 
 const playerNPC = new Image();
 playerNPC.src = "images/chewie.png";
 const background = new Image();
-background.src = "images/background.jpeg";
+background.src = "images/background.png";
 
 function drawNPC(img, sX, sY, sW, sH, dX, dY, dW, dH) {
     ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH);
@@ -35,7 +36,7 @@ window.addEventListener("keyup", function(e) {
 });
 
 function movePlayer() {
-    if (keys[38] && player.y > 100) { // up 
+    if (keys[38] && player.y > 50) { // up 
         player.y -= player.speed;
         player.frameY = 3;
     }
@@ -50,6 +51,19 @@ function movePlayer() {
     if (keys[39] && player.x < canvas.width - player.width) { // right
         player.x += player.speed;
         player.frameY = 2;
+    }
+    // updating place depending on where the NPC is
+    if (146 < player.x && player.x < 254 && 138 < player.y && player.y < 219) {
+        player.place = 1;
+    }
+    if (317 < player.x && player.x < 443 && 219 < player.y && player.y < 291) {
+        player.place = 2;
+    }
+    if (443 < player.x && player.x < 551 && 48 < player.y && player.y < 156) {
+        player.place = 3;
+    }
+    if (254 < player.x && player.x < 335 && 48 < player.y && player.y < 120) {
+        player.place = 4;
     }
 }
 
@@ -88,8 +102,9 @@ function animate() {
         ctx.drawImage(background,0,0,canvas.width, canvas.height);
         drawNPC(playerNPC,player.width * player.frameX,player.height * player.frameY,player.width, player.height,player.x,player.y,player.width,player.height);
         movePlayer();
+        console.log(player.place);
         handlePlayerFrame();
     }
 }
 
-startAnimating(10);
+startAnimating(20);
