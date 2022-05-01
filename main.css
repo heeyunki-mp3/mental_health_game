@@ -169,6 +169,9 @@ body{
     color: hsl(0, 0%, 40%);
   }
 
+.canvas-container{
+  position: relative;
+}
 #canvas1 {
   width: 400px;
   height: 300px;
@@ -177,14 +180,13 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-170%, 17%);
-}
-#map-title {
-  color: white;
-  z-index: 2;
+  transform: translate(-170%, -10%);
 }
 
 #enterButton {
-  z-index: -1;
-  position: relative;
+  z-index: 1000;
+  position: absolute;
+  left: 14%;
+  top: 80%;
+  transform: translate(0%, 600%);
 }

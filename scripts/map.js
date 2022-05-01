@@ -112,13 +112,5 @@ function animate() {
 }
 
 function displayMap() {
-    var enterButton = document.createElement("button");
-                    enterButton.className = "enterButton";
-                    enterButton.innerHTML = "Enter";
-                    enterButton.id = "enterButton";
-                    enterButton.onclick =function(){
-                        loadPage(pageElement.nextpage);
-                    }
-                    canvas.appendChild(enterButton);
     startAnimating(30);
 }

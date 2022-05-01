@@ -21,6 +21,7 @@ function display(){
     displayTitle();
     displayStoneCount();
     displayBody();
+    showMap = true;
     if (showMap){
         displayMap();//TODO! Alayna, please implement this :DD
     }
