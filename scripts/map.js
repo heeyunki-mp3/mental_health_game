@@ -56,19 +56,19 @@ function movePlayer() {
     enterButton = document.getElementById('enterButton');
     // updating place depending on where the NPC is
     if (boundaries[0][0] < player.x && player.x < boundaries[0][2] && boundaries[0][1] < player.y && player.y < boundaries[0][3]) {
-        player.place = 1; // moody moon
+        player.place = 9; // moody moon
         enterButton.style.visibility = 'visible';
     }
     else if (boundaries[1][0] < player.x && player.x < boundaries[1][2] && boundaries[1][1] < player.y && player.y < boundaries[1][3]) {
-        player.place = 2; // time thing
+        player.place = 24; // time thing
         enterButton.style.visibility = 'visible';
     }
     else if (boundaries[2][0] < player.x && player.x < boundaries[2][2] && boundaries[2][1] < player.y && player.y < boundaries[2][3]) {
-        player.place = 3; // tree place
+        player.place = 1; // tree place
         enterButton.style.visibility = 'visible';
     }
     else if (boundaries[3][0] < player.x && player.x < boundaries[3][2] && boundaries[3][1] < player.y && player.y < boundaries[3][3]) {
-        player.place = 4; // blue earth
+        player.place = 30; // blue earth
         enterButton.style.visibility = 'visible';
     }
     else {
