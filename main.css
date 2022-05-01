@@ -45,6 +45,21 @@ body{
     background-color: rgb(103, 103, 255);
     color: white;
 }
+.nextPageButton{
+    position: absolute;
+    font-family: 'overpass';
+    font-size:20pt;
+    top:50%;
+    left:45%;
+    padding:3%;
+
+    background-color: rgb(200, 200, 255);
+    transition-duration: 0.4s;
+}
+.nextPageButton:hover {
+    background-color: rgb(103, 103, 255);
+    color: white;
+}
 #stone{
     background-color:rgba(0, 0, 0, 0.502);
     color: white;

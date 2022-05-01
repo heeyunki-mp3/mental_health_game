@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 9; //modify this if you want to test different stages.
+    pageIndex = 7; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -75,13 +75,14 @@ function loadGame(el){
     infoDiv.appendChild(gameStatement);
     for (var i=0; i<el.gameComponent.length;i++){
         var tmpImg = document.createElement("img");
-        tmpImg.src = "../images/minigame/"+el.gameComponent[i];
+        tmpImg.src = "images/minigame/"+el.gameComponent[i];
         tmpImg.className = "gameItems";
         tmpImg.onclick =function(){
-            tmpImg.style.visibility = "hidden";
+            this.style.visibility = "hidden";
             if(checkEndOfGame()){
                 if(!(el.nextpage==null)){
                     var nextButton = document.createElement("button");
+                    nextButton.className = "nextPageButton";
                     nextButton.innerHTML = "Next Page";
                     nextButton.onclick =function(){
                         loadPage(pageElement.nextpage);
@@ -101,6 +102,7 @@ function loadGame(el){
     infoDiv.appendChild(gameStatement);
     infoDiv.appendChild(gamebody);
 }
+
 function checkEndOfGame(){
     var gameItems = document.getElementsByClassName("gameItems");
     for (const gi of gameItems){
@@ -218,6 +220,4 @@ function loadQuestion(){
     questionDiv.appendChild(formEl);
     questionDiv.appendChild(submitButton);
     infoDiv.appendChild(questionDiv);
-
-    
 }
