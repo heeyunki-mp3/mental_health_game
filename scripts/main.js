@@ -27,7 +27,7 @@ function display(){
     displayTitle();
     displayStoneCount();
     displayBody();
-    showMap = true;
+
     if (showMap){
         mapElement.style.visibility = 'visible';
         displayMap();//TODO! Alayna, please implement this :DD
@@ -276,4 +276,13 @@ function endOfGame(){
     infoDiv.appendChild(disclaimerEl);
     document.getElementsByClassName("nextArrow")[0].style.visibility= "hidden";
 
+}
+function enterNewPage(){
+    if(playerPosition == pageIndex+1){
+        loadPage(pageIndex+1);
+
+    }
+    else{
+        alert("Please go to the right place");
+    }
 }

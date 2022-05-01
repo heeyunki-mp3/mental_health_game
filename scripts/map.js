@@ -75,6 +75,7 @@ function movePlayer() {
         player.place = 0;
         enterButton.style.visibility = 'hidden';
     }
+    playerPosition = player.place;
 }
 
 function handlePlayerFrame() {
