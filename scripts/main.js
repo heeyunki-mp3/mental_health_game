@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 2; //modify this if you want to test different stages.
+    pageIndex = 9; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -122,6 +122,9 @@ function loadDialogue(){
         if (dialogueIndex<pageElement.dialogue.length-1){
             dialogueIndex++;
             dialogueDiv.innerHTML = pageElement.dialogue[dialogueIndex];
+            if(!(pageElement.background2==null)&&pageElement.background_change==dialogueIndex){
+                bodyTag.style.backgroundImage = "url(images/background/"+pageElement.background2+")";
+            }
         }
         else{ //finished talking (moving on to the next page)
             if(!(pageElement.nextpage==null)){

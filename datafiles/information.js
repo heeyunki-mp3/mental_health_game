@@ -4,7 +4,9 @@ PAGE=[
         place:"Home",
         npc:"",
         isGame: false,
-        background:"intro.png",
+        background_change:3,
+        background:"intro_npc.png",
+        background2:"intro_stone.png",
         isStone: false,
         isQuestion:false,
         dialogue:["Hello player! You must be wondering where this is.", "This is the Mental Galaxy, inside your subconscious mind."
