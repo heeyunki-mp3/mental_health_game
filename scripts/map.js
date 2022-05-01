@@ -6,8 +6,8 @@ canvas.height = 500;
 const keys = [];
 
 const player = {
-    x: 200,
-    y: 300,
+    x: 350,
+    y: 225,
     width: 40,
     height: 72,
     frameX: 0,
@@ -20,7 +20,7 @@ const player = {
 const playerNPC = new Image();
 playerNPC.src = "images/chewie.png";
 const background = new Image();
-background.src = "images/background.png";
+background.src = "images/background/intro2.png";
 
 function drawNPC(img, sX, sY, sW, sH, dX, dY, dW, dH) {
     ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH);
@@ -36,7 +36,7 @@ window.addEventListener("keyup", function(e) {
 });
 
 function movePlayer() {
-    if (keys[38] && player.y > 50) { // up 
+    if (keys[38] && player.y > 0) { // up 
         player.y -= player.speed;
         player.frameY = 3;
     }
@@ -52,18 +52,22 @@ function movePlayer() {
         player.x += player.speed;
         player.frameY = 2;
     }
+    boundaries = [[11,183,146,291],[317,327,551,417],[569,21,740,192],[200,12,353,120]]
     // updating place depending on where the NPC is
-    if (146 < player.x && player.x < 254 && 138 < player.y && player.y < 219) {
-        player.place = 1;
+    if (boundaries[0][0] < player.x && player.x < boundaries[0][2] && boundaries[0][1] < player.y && player.y < boundaries[0][3]) {
+        player.place = 1; // moody moon
     }
-    if (317 < player.x && player.x < 443 && 219 < player.y && player.y < 291) {
-        player.place = 2;
+    else if (boundaries[1][0] < player.x && player.x < boundaries[1][2] && boundaries[1][1] < player.y && player.y < boundaries[1][3]) {
+        player.place = 2; // time thing
     }
-    if (443 < player.x && player.x < 551 && 48 < player.y && player.y < 156) {
-        player.place = 3;
+    else if (boundaries[2][0] < player.x && player.x < boundaries[2][2] && boundaries[2][1] < player.y && player.y < boundaries[2][3]) {
+        player.place = 3; // tree place
     }
-    if (254 < player.x && player.x < 335 && 48 < player.y && player.y < 120) {
-        player.place = 4;
+    else if (boundaries[3][0] < player.x && player.x < boundaries[3][2] && boundaries[3][1] < player.y && player.y < boundaries[3][3]) {
+        player.place = 4; // blue earth
+    }
+    else {
+        player.place = 0;
     }
 }
 
@@ -107,4 +111,4 @@ function animate() {
     }
 }
 
-startAnimating(20);
+startAnimating(30);
