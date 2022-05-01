@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 0; //modify this if you want to test different stages.
+    pageIndex = 2; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -112,14 +112,16 @@ function checkEndOfGame(){
 }
 function loadDialogue(){
     var dialogueIndex = 0;
-    infoDiv.innerHTML = pageElement.dialogue[dialogueIndex];
+    var dialogueDiv = document.createElement("div");
+    dialogueDiv.className = "dialogueDiv";
+    dialogueDiv.innerHTML = pageElement.dialogue[dialogueIndex];
     var nextButton = document.createElement("button");
     nextButton.className = "nextArrow";
     nextButton.innerHTML = ">";
     nextButton.onclick =function(){
         if (dialogueIndex<pageElement.dialogue.length-1){
             dialogueIndex++;
-            infoDiv.innerHTML = pageElement.dialogue[dialogueIndex];
+            dialogueDiv.innerHTML = pageElement.dialogue[dialogueIndex];
         }
         else{ //finished talking (moving on to the next page)
             if(!(pageElement.nextpage==null)){
@@ -131,14 +133,19 @@ function loadDialogue(){
                 displayMap();
             }
         }
-        infoDiv.appendChild(nextButton);
+        dialogueDiv.appendChild(nextButton);
     }
-    infoDiv.appendChild(nextButton);
+    dialogueDiv.appendChild(nextButton);
+    infoDiv.appendChild(dialogueDiv);
 }
 function loadQuestion(){
+    let questionDiv = document.createElement("div");
+    questionDiv.className = "questionDiv";
+
     //create question
     let questionEl = document.createElement("div");
     questionEl.innerHTML = pageElement.dialogue.question;
+    questionEl.className = "questionItself";
     let formEl = document.createElement("form");
     formEl.id = "questionForm";
 
@@ -152,14 +159,25 @@ function loadQuestion(){
         radioEl.type = "radio";
         radioEl.name = questionName;
         radioEl.value = i;
+        radioEl.className = "rad-input";
+
         let choiceSpan = document.createElement("span");
         choiceSpan.innerHTML = pageElement.dialogue.choices[i];
+        choiceSpan.className = "rad-text";
+        let radioCheck = document.createElement("span");
+        radioCheck.className = "rad-design";
+        labelEl.className = "rad-label";
+
+
         labelEl.appendChild(radioEl);
+        labelEl.appendChild(radioCheck);
         labelEl.appendChild(choiceSpan);
+        labelEl.appendChild(document.createElement("br"));
         formEl.appendChild(labelEl);
     }
     
     let submitButton = document.createElement("button");
+    submitButton.className = "questionSubmitButton";
     submitButton.innerHTML = "Submit";
     submitButton.onclick = function(){
         console.log("questionName: "+questionName);
@@ -174,17 +192,18 @@ function loadQuestion(){
         console.log(pageElement.dialogue.answer);
         
         //react to the answer
-        infoDiv.innerHTML=pageElement.dialogue.reaction[pageElement.dialogue.react[parseInt(pageElement.dialogue.answer)]]; 
+        questionDiv.innerHTML=pageElement.dialogue.reaction[pageElement.dialogue.react[parseInt(pageElement.dialogue.answer)]]; 
         
         console.log(pageElement.nextpage);
         //move onto the next page
         if(!(pageElement.nextpage==null)){
             var nextButton = document.createElement("button");
-            nextButton.innerHTML = "Next Page";
+            nextButton.innerHTML = ">";
+            nextButton.className = "nextArrow";
             nextButton.onclick =function(){
                 loadPage(pageElement.nextpage);
             }
-            infoDiv.appendChild(nextButton);
+            questionDiv.appendChild(nextButton);
             //ex: nextpage = 2 (index of the page in PAGE)
         }
         else{
@@ -192,8 +211,10 @@ function loadQuestion(){
             displayMap();
         }
     }
-    infoDiv.appendChild(questionEl);
-    infoDiv.appendChild(formEl);
-    infoDiv.appendChild(submitButton);
+    questionDiv.appendChild(questionEl);
+    questionDiv.appendChild(formEl);
+    questionDiv.appendChild(submitButton);
+    infoDiv.appendChild(questionDiv);
+
     
 }
