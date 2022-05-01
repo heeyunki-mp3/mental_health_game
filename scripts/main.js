@@ -14,6 +14,7 @@ function initialize(){
     stoneSpan = document.getElementById("stoneCount");
     bodyTag = document.getElementById("body");
     mapElement = document.getElementById('canvas1');
+    enterButton = document.getElementById('enterButton');
     display();
 }
 function display(){
@@ -26,13 +27,14 @@ function display(){
     displayTitle();
     displayStoneCount();
     displayBody();
-   
+    showMap = true;
     if (showMap){
         mapElement.style.visibility = 'visible';
         displayMap();//TODO! Alayna, please implement this :DD
     }
     else {
         mapElement.style.visibility = 'hidden';
+        enterButton.style.visibility = 'hidden';
     }
 }
 function displayTitle(){
