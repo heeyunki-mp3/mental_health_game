@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 29; //modify this if you want to test different stages.
+    pageIndex = 0; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
