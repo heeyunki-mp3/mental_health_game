@@ -21,8 +21,13 @@ function display(){
     displayTitle();
     displayStoneCount();
     displayBody();
+    showMap = true;
     if (showMap){
         displayMap();//TODO! Alayna, please implement this :DD
+    }
+    else {
+        element = document.getElementById('canvas1');
+        element.style.visibility = 'hidden';
     }
 }
 function displayTitle(){

@@ -111,4 +111,6 @@ function animate() {
     }
 }
 
-startAnimating(30);
+function displayMap() {
+    startAnimating(30);
+}
