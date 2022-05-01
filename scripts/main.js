@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 0;
+    pageIndex = 0; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -12,21 +12,36 @@ function initialize(){
     infoDiv = document.getElementById("information");
     navDiv = document.getElementById("navigation");
     stoneSpan = document.getElementById("stoneCount");
+    bodyTag = document.getElementById("body");
     display();
 }
 function display(){
-    stoneSpan.innerHTML = stoneCount;
+    pageElement = PAGE[pageIndex];
+    displayBackground();
+    displayTitle();
+    displayStoneCount();
     displayBody();
     if (showMap){
         displayMap();//TODO! Alayna, please implement this :DD
     }
 }
+function displayTitle(){
+    pageTitle.innerHTML = pageElement.place;
+}
+function displayBackground(){
+    bodyTag.style.backgroundImage = "url(images/background/"+pageElement.background+")";
+}
+function displayStoneCount(){
+    
+    if(pageElement.isStone){
+        stoneCount++;
+    }
+    stoneSpan.innerHTML = stoneCount;
+}
 function displayBody(){
     npcDiv.innerHTML = "";
     infoDiv.innerHTML = "";
     
-    pageElement = PAGE[pageIndex];
-
     //create npc image
     let npcImage = document.createElement("img");
     //TODO: UNCOMMENT THIS WHEN IMAGES ARE IMPLEMENTED
@@ -99,6 +114,7 @@ function loadDialogue(){
     var dialogueIndex = 0;
     infoDiv.innerHTML = pageElement.dialogue[dialogueIndex];
     var nextButton = document.createElement("button");
+    nextButton.className = "nextArrow";
     nextButton.innerHTML = ">";
     nextButton.onclick =function(){
         if (dialogueIndex<pageElement.dialogue.length-1){
