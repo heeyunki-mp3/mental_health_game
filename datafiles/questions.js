@@ -1,5 +1,6 @@
 questions=[
     {
+        reverse:true,
         number:1,
         question:"I felt lonely.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -8,6 +9,7 @@ questions=[
         react: [0, 1, 1, 1]
     },
     {
+        reverse:false,
         number:2,
         question:"I talked less than usual.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -16,6 +18,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:3,
         question:"I felt that people dislike me.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -24,6 +27,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:4,
         question:"People were unfriendly.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -32,6 +36,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:5,
         question:"I thought my life had been a failure.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -40,7 +45,8 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
-        number:6,
+        reverse:true,
+        number:6,//this
         question:"I felt I was just as good as other people.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
         answer:"",
@@ -48,6 +54,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:7,
         question:"I felt sad.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -56,6 +63,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:8,
         question:"I felt depressed", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -64,7 +72,8 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
-        number:9,
+        reverse:true,
+        number:9,//this
         question:"I was happy.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
         answer:"",
@@ -72,6 +81,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:10,
         question:"I felt that I could not shake off the blues even with help from my family or friends.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -80,6 +90,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:11,
         question:"I felt fearful.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -87,8 +98,9 @@ questions=[
         reaction:["I see."],
         react: [0, 0, 0, 0]
     },
-    {
-        number:12,
+    {        
+        reverse:true,
+        number:12,//this
         question:"I enjoyed life.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
         answer:"",
@@ -96,6 +108,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:13,
         question:"I had crying spells.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -104,7 +117,8 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
-        number:14,
+        reverse:true,
+        number:14,//this
         question:"I feel hopeful about my future.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
         answer:"",
@@ -112,6 +126,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:15,
         question:"I could not get 'going.'", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -120,6 +135,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:16,
         question:"I had trouble keeping my mind on what I was doing.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -128,6 +144,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:17,
         question:"I was bothered by things that usually don’t bother me.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -136,6 +153,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:18,
         question:"I felt that everything I did was an effort.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -144,6 +162,7 @@ questions=[
         react: [0, 0, 0, 0]
     },
     {
+        reverse:false,
         number:19,
         question:"My sleep was restless.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
@@ -152,6 +171,7 @@ questions=[
         react: [0, 1, 1, 1]
     },
     {
+        reverse:false,
         number:20,
         question:"I did not feel like eating; my appetite was poor.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],

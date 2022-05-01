@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 9; //modify this if you want to test different stages.
+    pageIndex = 23; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -13,6 +13,7 @@ function initialize(){
     navDiv = document.getElementById("navigation");
     stoneSpan = document.getElementById("stoneCount");
     bodyTag = document.getElementById("body");
+    mapElement = document.getElementById('canvas1');
     display();
 }
 function display(){
@@ -21,13 +22,13 @@ function display(){
     displayTitle();
     displayStoneCount();
     displayBody();
-    showMap = true;
+   
     if (showMap){
+        mapElement.style.visibility = 'visible';
         displayMap();//TODO! Alayna, please implement this :DD
     }
     else {
-        element = document.getElementById('canvas1');
-        element.style.visibility = 'hidden';
+        mapElement.style.visibility = 'hidden';
     }
 }
 function displayTitle(){
@@ -98,6 +99,7 @@ function loadGame(el){
                 }
                 else{
                     showMap = true;
+                    mapElement.style.visibility = 'visible';
                     displayMap();
                 }
             }
@@ -141,6 +143,7 @@ function loadDialogue(){
             }
             else{
                 showMap = true;
+                mapElement.style.visibility = 'visible';
                 displayMap();
             }
         }
@@ -219,6 +222,7 @@ function loadQuestion(){
         }
         else{
             showMap = true;
+            mapElement.style.visibility = 'visible';
             displayMap();
         }
     }
@@ -226,4 +230,8 @@ function loadQuestion(){
     questionDiv.appendChild(formEl);
     questionDiv.appendChild(submitButton);
     infoDiv.appendChild(questionDiv);
+}
+
+function calculateResult(){
+  //  for ()
 }
