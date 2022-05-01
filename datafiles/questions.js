@@ -36,7 +36,7 @@ questions=[
         question:"I thought my life had been a failure.", 
         choices:["Rarely or none of the time (less than 1 day)","Some or a little of the time (1-2 days)", "Occasionally or a moderate amount of time (3-4 days)", "Most or all of the time (5-7 days)"],
         answer:"",
-        reaction:["I don't think you're a failure, Moody Moon. During the night when everything is dark, you are the one who shines the brightest."],
+        reaction:["North Fairy: I don't think you're a failure, Moody Moon. During the night when everything is dark, you are the one who shines the brightest."],
         react: [0, 0, 0, 0]
     },
     {

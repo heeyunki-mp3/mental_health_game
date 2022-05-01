@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 7; //modify this if you want to test different stages.
+    pageIndex = 9; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -75,6 +75,7 @@ function loadGame(el){
     infoDiv.appendChild(gameStatement);
     for (var i=0; i<el.gameComponent.length;i++){
         var tmpImg = document.createElement("img");
+    
         tmpImg.src = "images/minigame/"+el.gameComponent[i];
         tmpImg.className = "gameItems";
         tmpImg.onclick =function(){

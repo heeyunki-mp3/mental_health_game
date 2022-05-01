@@ -155,7 +155,7 @@ body{
   }
   
   .rad-text {
-    color: hsl(0, 0%, 40%);
+    color: hsl(0, 0%, 20%);
     margin-left: 14px;
     letter-spacing: 3px;
     font-size: 18px;
@@ -166,5 +166,9 @@ body{
   }
   
   .rad-input:checked~.rad-text {
-    color: hsl(0, 0%, 40%);
+    color: hsl(0, 0%, 0%);
+  }
+
+  .gameItems{
+    width:25%;
   }
