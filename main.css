@@ -185,3 +185,27 @@ body{
   left: 50%;
   transform: translate(-170%, 17%);
 }
+.resultDiv{
+    border-left:5px solid rgb(164, 164, 255);
+    padding:2%;
+    display:inline-block;
+    position: absolute;
+    font-family: 'overpass';
+    font-size:16pt;
+    width:50%;
+    background-color:rgba(255,255,255,0.5);
+    top:20%;
+    left:45%;
+}
+.disclaimerDiv{
+    padding:2%;
+    display:inline-block;
+    position: absolute;
+    font-family: 'overpass';
+    font-size:10pt;
+    width:96%;
+    background-color:rgba(255,255,255,0.5);
+    top:40%;
+    left:0%;
+
+}

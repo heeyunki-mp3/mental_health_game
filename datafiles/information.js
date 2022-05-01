@@ -9,7 +9,7 @@ PAGE=[
         background2:"intro_stone.png",
         isStone: false,
         isQuestion:false,
-        dialogue:["Hello player! You must be wondering where this is.", "This is the Mental Galaxy, inside your subconscious mind."
+        dialogue:["Hello player! You must be wondering where this is.", "This is the Mind Galaxy, inside your subconscious mind."
     , "Please follow me on a journey to recollect the memories from your past week.", "Your mission is to collect magical stones from the different planets, by interacting with different creatures, and answering questions about how last week went for you.", "Let's first head to the Planet of Botanical Garden."],
         nextpage:null
     },
@@ -304,7 +304,9 @@ PAGE=[
         place:"Planet of Time",
         npc:"",
         isGame: false,
+        background_change:2,
         background:"hour_glass.png",
+        background2:"3_stone.png",
         isStone: true,
         isQuestion:false,
         dialogue:["Well, I better head back quick before time runs out!","You should go check out the Well of Wellness next.","Here is your stone."],
@@ -356,6 +358,7 @@ PAGE=[
         npc:"",
         isGame: true,
         background:"well.png",
+        gameComponent:[],
         isStone: false,
         isQuestion:false,
         dialogue: ["Click on the rope to pull up the bucket."],
@@ -369,13 +372,13 @@ PAGE=[
         isStone: true,
         isQuestion:false,
         dialogue: ["The journey is complete! Let's head back."],
-        nextpage:null
+        nextpage:36
     },
     {
         place:"Home",
         npc:"",
         isGame: false,
-        background:"intro.png",
+        background:"intro.jpg",
         isStone: true,
         isQuestion:false,
         dialogue: ["Thank you for collecting all the stones."],
