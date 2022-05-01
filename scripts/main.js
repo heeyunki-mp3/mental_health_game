@@ -2,7 +2,7 @@ function initialize(){
     //current states
     pageIndex = 7; //modify this if you want to test different stages.
     currentProgress = 0;
-    showMap = false;
+    showMap = true;
 
     stoneCount = 0;
 
@@ -21,7 +21,6 @@ function display(){
     displayTitle();
     displayStoneCount();
     displayBody();
-    showMap = true;
     if (showMap){
         displayMap();//TODO! Alayna, please implement this :DD
     }
