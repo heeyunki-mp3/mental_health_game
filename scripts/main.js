@@ -1,11 +1,11 @@
 function initialize(){
     //current states
-    pageIndex = 7; //modify this if you want to test different stages.
+    pageIndex = 35; //modify this if you want to test different stages.
     currentProgress = 0;
-    showMap = true;
+    showMap = false;
 
     stoneCount = 0;
-
+    mentalScore = 0;
     //elements from the html page
     pageTitle = document.getElementById("title");
     npcDiv = document.getElementById("npc");
@@ -13,21 +13,26 @@ function initialize(){
     navDiv = document.getElementById("navigation");
     stoneSpan = document.getElementById("stoneCount");
     bodyTag = document.getElementById("body");
+    mapElement = document.getElementById('canvas1');
     display();
 }
 function display(){
     pageElement = PAGE[pageIndex];
+    if(pageIndex == PAGE.length-1){
+        endOfGame();
+        return;
+    }
     displayBackground();
     displayTitle();
     displayStoneCount();
     displayBody();
-    showMap = true;
+   
     if (showMap){
+        mapElement.style.visibility = 'visible';
         displayMap();//TODO! Alayna, please implement this :DD
     }
     else {
-        element = document.getElementById('canvas1');
-        element.style.visibility = 'hidden';
+        mapElement.style.visibility = 'hidden';
     }
 }
 function displayTitle(){
@@ -80,6 +85,7 @@ function loadGame(el){
     infoDiv.appendChild(gameStatement);
     for (var i=0; i<el.gameComponent.length;i++){
         var tmpImg = document.createElement("img");
+    
         tmpImg.src = "images/minigame/"+el.gameComponent[i];
         tmpImg.className = "gameItems";
         tmpImg.onclick =function(){
@@ -97,6 +103,7 @@ function loadGame(el){
                 }
                 else{
                     showMap = true;
+                    mapElement.style.visibility = 'visible';
                     displayMap();
                 }
             }
@@ -140,6 +147,7 @@ function loadDialogue(){
             }
             else{
                 showMap = true;
+                mapElement.style.visibility = 'visible';
                 displayMap();
             }
         }
@@ -218,6 +226,7 @@ function loadQuestion(){
         }
         else{
             showMap = true;
+            mapElement.style.visibility = 'visible';
             displayMap();
         }
     }
@@ -225,4 +234,42 @@ function loadQuestion(){
     questionDiv.appendChild(formEl);
     questionDiv.appendChild(submitButton);
     infoDiv.appendChild(questionDiv);
+}
+
+function calculateResult(){
+    for (const qu of questions){
+        if(reverse){
+            mentalScore += -1*(parseInt(answer)-4);
+        }
+        else{
+            mentalScore += parseInt(answer)+1;
+        }
+    }
+}
+
+function endOfGame(){
+    displayBackground();
+    displayTitle();
+    displayStoneCount();
+    displayBody();
+    resultString = "Your score is "+mentalScore+"!!!!!\n"+ ((mentalScore>20)?"The assessment indicates that you are at risk of depression":"The assessment indicates that you are not at risk of depression ");
+
+    resultEl = document.createElement("div");
+    resultEl.innerHTML = resultString;
+    resultEl.className = "resultDiv";
+
+    disclaimerString = "You just completed the Center for Epidemiologic Studies-Depression Scale (CES-D) assessment. The CES-D assessment is a self-report to evaluate your feelings, behavior, and outlook from the past week. \
+    \
+    <br /><br /> <b>Disclaimer:<b> <br /> <br /> \
+    The CES-D assessment is not always an accurate measure for depression. To diagnose depression, a doctor usually runs a series of assessments, such as a physical exam, lab tests, mental health history, personal history, mental evaluation, and cognitive evaluation. \n\
+    Do not attempt to self-diagnose diseases or disorders, because misdiagnosing poses the risk of mistaking other serious physical diseases for depression. Please consult a doctor.\n\
+    This interactive game of CES-D assessment was created to make mental health assessments more accessible to people. Mental health assessments should be taken regularly like health check-ups, but due to social stigma around depression and a lack of awareness, people with depression often do not reach out for professional help.\n\
+    The purpose of the game is to make people more aware of their mental states and more comfortable with psychological assessments by making a depression assessment more fun and interactive. It is not the goal of the game to accurately detect depression. Players should use the game as an initial screening (and/or to track mental wellbeing), and consult a doctor afterwards."
+    
+    disclaimerEl =document.createElement("div");
+    disclaimerEl.innerHTML = disclaimerString;
+    disclaimerEl.className = "disclaimerDiv";
+    
+    infoDiv.appendChild(resultEl);
+    infoDiv.appendChild(disclaimerEl);
 }

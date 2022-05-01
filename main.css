@@ -155,7 +155,7 @@ body{
   }
   
   .rad-text {
-    color: hsl(0, 0%, 40%);
+    color: hsl(0, 0%, 20%);
     margin-left: 14px;
     letter-spacing: 3px;
     font-size: 18px;
@@ -166,12 +166,16 @@ body{
   }
   
   .rad-input:checked~.rad-text {
-    color: hsl(0, 0%, 40%);
+    color: hsl(0, 0%, 0%);
   }
 
 .canvas-container{
   position: relative;
 }
+  .gameItems{
+    width:25%;
+  }
+
 #canvas1 {
   width: 400px;
   height: 300px;
@@ -181,6 +185,30 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-170%, -10%);
+  transform: translate(-170%, 17%);
+}
+.resultDiv{
+    border-left:5px solid rgb(164, 164, 255);
+    padding:2%;
+    display:inline-block;
+    position: absolute;
+    font-family: 'overpass';
+    font-size:16pt;
+    width:50%;
+    background-color:rgba(255,255,255,0.5);
+    top:20%;
+    left:45%;
+}
+.disclaimerDiv{
+    padding:2%;
+    display:inline-block;
+    position: absolute;
+    font-family: 'overpass';
+    font-size:10pt;
+    width:96%;
+    background-color:rgba(255,255,255,0.5);
+    top:40%;
+    left:0%;
 }
 
 #enterButton {
