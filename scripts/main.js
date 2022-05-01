@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 35; //modify this if you want to test different stages.
+    pageIndex = 32; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -272,4 +272,6 @@ function endOfGame(){
     
     infoDiv.appendChild(resultEl);
     infoDiv.appendChild(disclaimerEl);
+    document.getElementsByClassName("nextArrow")[0].style.visibility= "hidden";
+
 }

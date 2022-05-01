@@ -351,18 +351,18 @@ PAGE=[
         isStone: false,
         isQuestion:false,
         dialogue: ["Well, you've come a long way. It's probably been a tough journey.", "The final stone is inside the well. Pull up the bucket from the well to find the final stone."],
-        nextpage:33
+        nextpage:34
     },
     {
         place:"Well of Wellness",
         npc:"",
         isGame: true,
         background:"well.png",
-        gameComponent:[],
+        gameComponent:['rope.png'],
         isStone: false,
         isQuestion:false,
         dialogue: ["Click on the rope to pull up the bucket."],
-        nextpage:34
+        nextpage:35
     },
     {
         place:"Well of Wellness",
@@ -381,7 +381,7 @@ PAGE=[
         background:"intro.jpg",
         isStone: true,
         isQuestion:false,
-        dialogue: ["Thank you for collecting all the stones."],
+        dialogue: ["Thank you for collecting all the stones. ...or recollecting your mind ;)"],
         nextpage:null
     }
 ]
