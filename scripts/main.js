@@ -1,6 +1,6 @@
 function initialize(){
     //current states
-    pageIndex = 32; //modify this if you want to test different stages.
+    pageIndex = 29; //modify this if you want to test different stages.
     currentProgress = 0;
     showMap = false;
 
@@ -30,7 +30,7 @@ function display(){
 
     if (showMap){
         mapElement.style.visibility = 'visible';
-        displayMap();//TODO! Alayna, please implement this :DD
+        displayMap();
     }
     else {
         mapElement.style.visibility = 'hidden';
@@ -83,6 +83,7 @@ function loadPage(toPage){
 function loadGame(el){
     let gameStatement = document.createElement("div");
     gameStatement.innerHTML = el.dialogue;
+    gameStatement.className = "gameInteraction";
     let gamebody = document.createElement("div");
     infoDiv.appendChild(gameStatement);
     for (var i=0; i<el.gameComponent.length;i++){
@@ -239,17 +240,21 @@ function loadQuestion(){
 }
 
 function calculateResult(){
+    mentalScore = 21;
+    /*
     for (const qu of questions){
-        if(reverse){
-            mentalScore += -1*(parseInt(answer)-4);
+        console.log(qu.answer);
+        if(qu.reverse){
+            mentalScore += -1*(parseInt(qu.answer)-4);
         }
         else{
-            mentalScore += parseInt(answer)+1;
+            mentalScore += parseInt(qu.answer)+1;
         }
-    }
+    }*/
 }
 
 function endOfGame(){
+    calculateResult();
     displayBackground();
     displayTitle();
     displayStoneCount();
@@ -279,7 +284,10 @@ function endOfGame(){
 }
 function enterNewPage(){
     if(playerPosition == pageIndex+1){
+        showMap=false;
+        enterButton.style.visibility="hidden";
         loadPage(pageIndex+1);
+
 
     }
     else{
